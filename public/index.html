@@ -3,11 +3,32 @@
 <head>
   <title>Express</title>
   <link rel="stylesheet" href="./styleshhets/style.css">
+  <script src="./post.js"></script>
 </head>
 
 <body>
   <h1>Express</h1>
-  <p>Welcome to Express</p>
+  <p id="demo"></p>
+
+<div>
+  <input type="text" id="INP1">
+  <input type="text" id="INP2">
+  <button onclick="init(INP1,INP2)" style="height: 50px; width: 50px;" id="item1">send</button>
+  <p id="test"></p>
+</div>
+  
 </body>
+
+<script>
+function myPost (INP1,INP2){
+  let v1 = document.getElementById("INP1")
+  let v2 = document.getElementById("INP2")
+  // alert(v1.value)
+  document.getElementById("test").innerHTML = v2.value ;
+  console.log(v1.value);
+}
+</script>
+<script>document.getElementById("demo").innerHTML = "Hello JavaScript!";</script>
+
 
 </html>
