@@ -10,11 +10,11 @@ exports.index = async (req, res, next) =>{
 
 exports.insert = async (req, res, next) =>{
 
-    const {value,factory} = req.body
+    const { factory,value } = req.body
 
     let product = new Product({
-        value: value,
-        factory: factory
+        factory: factory,
+        value: value
     });
     
     await product.save();
