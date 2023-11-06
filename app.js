@@ -7,6 +7,7 @@ const mongoose = require('mongoose')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/productPage');
+var productRouter2 = require('./routes/productPage2')
 
 var app = express();
 
@@ -29,6 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/product',productRouter);
+app.use('/product1',productRouter);
+app.use('/product2',productRouter2);
 
 module.exports = app;
