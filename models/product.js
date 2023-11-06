@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const productSchema = new Schema({
-  factory: {type: String},
+  factory: {type: Number},
   value: { type: Number }
     
   },{ toJSON: { virtuals: false, versionKey: false },
