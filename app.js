@@ -8,6 +8,8 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var productRouter = require('./routes/productPage');
 var productRouter2 = require('./routes/productPage2')
+var productRouter3 = require('./routes/productPage3')
+var productRouter4 = require('./routes/productPage4')
 
 var app = express();
 
@@ -32,5 +34,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/product1',productRouter);
 app.use('/product2',productRouter2);
+app.use('/product3',productRouter3);
+app.use('/product4',productRouter4);
 
 module.exports = app;

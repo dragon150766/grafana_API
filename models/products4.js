@@ -1,13 +1,13 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
-const productSchema2 = new Schema({
+const productSchema4 = new Schema({
   value: { type: Number }
     
   },{ toJSON: { virtuals: false, versionKey: false },
   timestamps: {createdAt: true, updatedAt: false},
-  collection:"products2"});
+  collection:"products4"});
 
-const product2 = mongoose.model("Product2",productSchema2)
+const product4 = mongoose.model("Product4",productSchema4)
 
-module.exports = product2
+module.exports = product4
