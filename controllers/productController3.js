@@ -22,3 +22,16 @@ exports.insert = async (req, res, next) =>{
         message: 'the data has be save!'   
     })
 }
+
+
+exports.delete = async(req,res, next) =>{
+    const product3 = await Product3.findOneAndDelete().sort({_id:1})
+
+    if(product3.deleteCount === 0){
+        throw new Error('no one delete')
+    }else{
+        res.status(200).json({
+            message: "delete sussced"
+        })
+    }
+}
